@@ -1,0 +1,52 @@
+# Site settings
+title: Andrea Griffiths
+description: Senior Developer Advocate at GitHub. Writing about dev tools, workflows, and open source.
+url: "https://andreagriffiths.dev"
+baseurl: ""
+
+# Author
+author:
+  name: Andrea Griffiths
+  email: andrea@andreagriffiths.dev
+  uri: "https://andreagriffiths.dev"
+  twitter: acolombiadev
+  github: AndreaGriffiths11
+  linkedin: andreagriffiths11
+  bluesky: ag11.dev
+
+# POSSE - Syndication targets
+# Add your profile URLs for each platform you syndicate to
+syndication:
+  twitter: "https://twitter.com/acolombiadev"
+  bluesky: "https://bsky.app/profile/ag11.dev"
+  linkedin: "https://linkedin.com/in/andreagriffiths11"
+  mastodon: ""  # Add if you have one
+  threads: ""   # Add if you have one
+
+# RSS Feed settings
+feed:
+  path: feed.xml
+  posts_limit: 20
+
+# Webmention settings (optional - for receiving interactions)
+webmention:
+  endpoint: "https://webmention.io/andreagriffiths.dev/webmention"
+  pingback: "https://webmention.io/andreagriffiths.dev/xmlrpc"
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

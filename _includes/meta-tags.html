@@ -1,0 +1,60 @@
+<!-- Primary Meta Tags -->
+<meta name="title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+<meta name="author" content="{{ site.author.name }}">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<!-- RSS Feed Discovery -->
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | truncate: 200 }}">
+<meta property="og:site_name" content="{{ site.title }}">
+{% if page.image %}
+<meta property="og:image" content="{{ page.image | absolute_url }}">
+{% elsif site.og_image %}
+<meta property="og:image" content="{{ site.og_image | absolute_url }}">
+{% endif %}
+{% if page.layout == 'post' %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+<meta property="article:author" content="{{ site.author.name }}">
+{% for tag in page.tags %}
+<meta property="article:tag" content="{{ tag }}">
+{% endfor %}
+{% endif %}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:site" content="@{{ site.author.twitter }}">
+<meta name="twitter:creator" content="@{{ site.author.twitter }}">
+<meta name="twitter:url" content="{{ page.url | absolute_url }}">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | truncate: 200 }}">
+{% if page.image %}
+<meta name="twitter:image" content="{{ page.image | absolute_url }}">
+{% elsif site.twitter_image %}
+<meta name="twitter:image" content="{{ site.twitter_image | absolute_url }}">
+{% endif %}
+
+<!-- Webmention endpoints (for receiving interactions) -->
+{% if site.webmention.endpoint %}
+<link rel="webmention" href="{{ site.webmention.endpoint }}">
+{% endif %}
+{% if site.webmention.pingback %}
+<link rel="pingback" href="{{ site.webmention.pingback }}">
+{% endif %}
+
+<!-- IndieWeb: h-card for author identity -->
+<link rel="me" href="https://github.com/{{ site.author.github }}">
+<link rel="me" href="https://twitter.com/{{ site.author.twitter }}">
+{% if site.author.bluesky %}
+<link rel="me" href="https://bsky.app/profile/{{ site.author.bluesky }}">
+{% endif %}
+{% if site.author.linkedin %}
+<link rel="me" href="https://linkedin.com/in/{{ site.author.linkedin }}">
+{% endif %}

@@ -1,0 +1,32 @@
+---
+layout: default
+title: Home
+---
+
+<section class="h-card">
+  <h1 class="p-name">{{ site.author.name }}</h1>
+  <p class="p-note">{{ site.description }}</p>
+
+  <ul class="social-links">
+    <li><a rel="me" href="https://github.com/{{ site.author.github }}">GitHub</a></li>
+    <li><a rel="me" href="https://twitter.com/{{ site.author.twitter }}">Twitter</a></li>
+    <li><a rel="me" href="https://bsky.app/profile/{{ site.author.bluesky }}">Bluesky</a></li>
+    <li><a rel="me" href="https://linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>
+  </ul>
+</section>
+
+<section class="posts">
+  <h2>Recent Posts</h2>
+  <ul class="post-list">
+    {% for post in site.posts limit:10 %}
+    <li class="h-entry">
+      <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </time>
+      <a class="p-name u-url" href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <p><a href="{{ '/feed.xml' | absolute_url }}">Subscribe via RSS</a></p>
+</section>

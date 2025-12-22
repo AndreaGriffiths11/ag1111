@@ -1,0 +1,55 @@
+<!-- POSSE Syndication Links -->
+<!-- Add these to your post layout to show where content was syndicated -->
+
+{% if page.syndication %}
+<div class="syndication-links">
+  <span class="syndication-label">Also published on:</span>
+  <ul class="syndication-list">
+    {% for link in page.syndication %}
+    <li>
+      <a href="{{ link.url }}" rel="syndication" class="u-syndication">
+        {{ link.name }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+<style>
+.syndication-links {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.syndication-label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.syndication-list {
+  display: inline;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.syndication-list li {
+  display: inline;
+}
+
+.syndication-list li:not(:last-child)::after {
+  content: ", ";
+}
+
+.syndication-list a {
+  color: #0969da;
+  text-decoration: none;
+}
+
+.syndication-list a:hover {
+  text-decoration: underline;
+}
+</style>
