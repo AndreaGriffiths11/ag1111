@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Andrea Griffiths</title>
+    <description>Senior Developer Advocate at GitHub. Writing about dev tools, workflows, and open source.</description>
+    <link>http://0.0.0.0:4000/</link>
+    <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 22 Dec 2025 17:29:37 +0000</pubDate>
+    <lastBuildDate>Mon, 22 Dec 2025 17:29:37 +0000</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+    <item>
+      <title>Welcome to POSSE Publishing</title>
+      <dc:creator>Andrea Griffiths</dc:creator>
+      <description>I’ve decided to take more control over my content by adopting POSSE - Publish on your Own Site, Syndicate Elsewhere.
+</description>
+      <content:encoded><![CDATA[<p>I’ve decided to take more control over my content by adopting <strong>POSSE</strong> - Publish on your Own Site, Syndicate Elsewhere.</p>
+
+<h2 id="what-is-posse">What is POSSE?</h2>
+
+<p>Rather than posting directly to Twitter, Bluesky, or LinkedIn, I now:</p>
+
+<ol>
+  <li><strong>Write here first</strong> - My site is the canonical source</li>
+  <li><strong>Syndicate copies</strong> - Share to social platforms with links back</li>
+  <li><strong>Own my content</strong> - Even if platforms disappear, my posts remain</li>
+</ol>
+
+<h2 id="why-it-matters">Why it matters</h2>
+
+<p>Social platforms come and go. Remember Vine? Google+? Twitter’s uncertain future? By publishing here first, I’m not at the mercy of any single platform.</p>
+
+<h2 id="how-it-works">How it works</h2>
+
+<p>Each post includes:</p>
+<ul>
+  <li><strong>RSS feed</strong> - Subscribe at <a href="/feed.xml">/feed.xml</a></li>
+  <li><strong>Meta tags</strong> - Rich previews when shared</li>
+  <li><strong>Syndication links</strong> - See where else this post lives (below)</li>
+</ul>
+
+<p>Want to implement POSSE on your own site? Check out <a href="https://indieweb.org/POSSE">IndieWeb.org/POSSE</a> for resources.</p>
+]]></content:encoded>
+      <pubDate>Sun, 22 Dec 2024 15:00:00 +0000</pubDate>
+      <link>http://0.0.0.0:4000/2024/12/welcome-to-posse/</link>
+      <guid isPermaLink="true">http://0.0.0.0:4000/2024/12/welcome-to-posse/</guid>
+      
+      <category>indieweb</category>
+      
+      <category>posse</category>
+      
+      <category>publishing</category>
+      
+      
+    </item>
+    
+  </channel>
+</rss>
